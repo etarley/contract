@@ -150,10 +150,9 @@ class ContractTemplateLine(models.Model):
 
     @api.depends("product_id")
     def _compute_uom_id(self):
+        # v19: UoM categories removed, simplified logic
         for line in self:
-            if not line.uom_id or (
-                line.product_id.uom_id.category_id.id != line.uom_id.category_id.id
-            ):
+            if not line.uom_id:
                 line.uom_id = line.product_id.uom_id
 
     @api.depends("contract_id.contract_type")
