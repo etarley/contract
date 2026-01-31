@@ -138,7 +138,6 @@
                                         widget="section_and_note_text"
                                         optional="show"
                                     />
-
                                     <field
                                         name="analytic_distribution"
                                         widget="analytic_distribution"
