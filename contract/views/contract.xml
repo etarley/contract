@@ -454,7 +454,7 @@
                     domain="[('active', '=', False)]"
                     name="inactive"
                 />
-                <group expand="0" string="Group By...">
+                <group string="Group By...">
                     <filter
                         string="Associated Partner"
                         name="group_by_partner"
