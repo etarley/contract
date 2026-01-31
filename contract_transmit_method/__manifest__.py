@@ -6,7 +6,7 @@
     "summary": """
         Set transmit method (email, post, portal, ...) in contracts and
         propagate it to invoices.""",
-    "version": "18.0.1.1.0",
+    "version": "19.0.1.1.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/contract",
