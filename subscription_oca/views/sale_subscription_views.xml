@@ -351,7 +351,7 @@
                     string="Next invoice date"
                     date="recurring_next_date"
                 />
-                <group string="Group By">
+                <group>
                     <filter
                         string="Partner"
                         name="groupby_partner_id"
