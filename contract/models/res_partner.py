@@ -52,7 +52,7 @@ class ResPartner(models.Model):
         @return: the contract view
         """
         self.ensure_one()
-        contract_type = self._context.get("contract_type")
+        contract_type = self.env.context.get("contract_type")
 
         res = self._get_act_window_contract_xml(contract_type)
         action_context = {k: v for k, v in self.env.context.items() if k != "group_by"}

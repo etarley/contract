@@ -42,18 +42,13 @@ class ContractTemplateLine(models.Model):
         readonly=False,
     )
     quantity = fields.Float(default=1.0, required=True)
-    product_uom_category_id = fields.Many2one(
-        comodel_name="uom.category",
-        related="product_id.uom_id.category_id",
-        readonly=True,
-    )
     uom_id = fields.Many2one(
         comodel_name="uom.uom",
         compute="_compute_uom_id",
         store=True,
         readonly=False,
         string="Unit of Measure",
-        domain="[('category_id', '=', product_uom_category_id)]",
+        domain="[]"  # UoM categories removed in v19,
     )
 
     # === Pricing ===
